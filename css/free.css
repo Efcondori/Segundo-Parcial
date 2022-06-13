@@ -1,0 +1,245 @@
+/*HEADER SECTION*/
+:root {
+    --yellow-color:  #ffbe0b;
+    --orange-color: #fb5607;
+    --pink-color: #ff006e;
+    --purple-color: #8338ec;
+    --blue-color: #3a86ff;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/*HEADER*/
+.header {
+    position: fixed;
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1rem;
+    background-color: var(--pink-color);
+    color: white;
+}
+/*logo*/
+.logo {
+    margin-top: 10px;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.logo i {
+    margin-right: 10px;
+}
+/*nav bar*/
+.navigation {
+    width: 100%;
+    height: 70%;
+}
+.navigation ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+.navigation ul li {
+    width: 20%;
+    height: 100%;
+    padding-top: 10px;
+    text-align: center;
+    text-overflow: ellipsis;
+
+}
+.navigation ul li:hover {
+    background-color: var(--purple-color);
+    cursor: pointer;
+}
+.navigation ul li a{
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    text-overflow: ellipsis;
+}
+
+/*MAIN*/
+main {
+
+    padding-top: 100px;
+    width: 100vw;
+    height: 2300px;
+    background: linear-gradient(var(--purple-color), var(--pink-color));
+}
+
+
+/*TOP 3 games section*/
+.tier3 {
+    width: 100vw;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.tier3 h1 {
+    padding: 0px 30px;
+    font-size: 1.5rem;
+}
+
+.games-container {
+    padding: 0px 30px;
+    width: 100vw;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 20px;
+    grid-template-columns: repeat(3, 250px);
+    grid-template-rows: 300px;
+    overflow-x: auto;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.game h2 {
+    font-size: 1.7rem;
+}
+.game h3 {
+    font-size: 1.2rem;
+}
+
+.game figure {
+    width: 100%;
+}
+.game figure img{
+    width: 100%;
+}
+
+.game p {
+    font-size: 1rem;
+}
+
+/*more games section*/
+.more {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.more h2{
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.more-games-container {
+    display: grid;
+    grid-auto-flow: row;
+    place-items: center;
+    gap: 30px;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(5, 250px); 
+}
+.more-games__element {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background: rgba(65,65,65,0.5);
+    border: 1px solid black;
+}
+.more-games__element h3 {
+    font-size: 1.2rem;
+}
+.more-games__element figure {
+    
+}
+.more-games__element figure img{
+    width: 100%;
+    max-width: 300px;
+}
+
+
+
+
+/*FOOTER*/
+.footer {
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgb(42, 42, 42);
+}
+.footer p {
+    margin-left: 50px;
+    font-size: 1.1rem;
+    color: white;
+}
+
+
+@media screen and (min-width: 620px) {
+    .header {
+        flex-direction: row;
+        align-items: center;
+    }
+    .logo {
+        width: 20%;
+    }
+    .navigation {
+        height: 100%;
+    }
+    .navigation ul {
+        align-items: center;
+        justify-content: center;
+    }
+    .navigation ul li a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 890px) {
+    main {
+        height: 1300px;
+    }
+
+
+
+    .tier3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .games-container {
+        width: 100vw;
+        column-gap: 100px;
+        display: grid;
+        place-items: center;
+        place-content: center;
+    }
+
+
+    .more-games-container {
+        padding: 0px 20px;
+        grid-auto-flow: row;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2,1fr);
+        gap: 30px;
+    }
+}
